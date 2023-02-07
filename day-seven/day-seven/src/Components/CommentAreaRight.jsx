@@ -87,12 +87,9 @@ const CommentAreaRight=({id})=>{
              ) }
 {isLoading &&   ( <div className="d-flex justify-content-center"><Spinner animation="border" variant="secondary"  /></div>)}
 {comments.length=== 0 ? (<div style={{color:"green"}}><em>Be the first one to comment!</em></div>) : (
-
+   <>
+<h6 className="text-center mt-3 " style={{textDecoration:"underline"}}>Comments</h6>
 <ListGroup>
-
-
-   
-  
    
          {comments.map((c)=>{
             
@@ -115,6 +112,7 @@ const CommentAreaRight=({id})=>{
              </ListGroup.Item>
           })}
           </ListGroup>
+          </> 
           
           
           )}
