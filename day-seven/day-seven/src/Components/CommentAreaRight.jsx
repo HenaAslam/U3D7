@@ -98,7 +98,7 @@ const CommentAreaRight=({id})=>{
             
              return    <ListGroup.Item className=" mt-3 list d-flex flex-column w-100" key={c._id}>
                {/* <Badge variant="info" className="truncate">{c.author} </Badge>  */}
-                <p  className="py-3 com px-3" ><strong>{c.author}</strong>  : {c.comment}</p>    
+                <p  className="py-3 com px-3" ><strong style={{color:"red"}}>{c.author}</strong>  : {c.comment}</p>    
                 <div className="d-flex align-items-center justify-content-around mt-1">
               <div className="d-flex flex-column justify-content-around" style={{height:"70px"}}>
                 <Badge variant="danger" className="p-1 mr-1"> Rating : {c.rate} / 5 </Badge>
