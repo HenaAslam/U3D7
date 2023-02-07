@@ -74,8 +74,8 @@ const AddComment=(props)=>{
 
              ) }
             
-
-<Form  className="d-flex flex-column justify-content-between align-items-center mb-2 mt-5" onSubmit={(e)=>{
+        
+<Form  className=" mb-2 mt-5" onSubmit={(e)=>{
     e.preventDefault()
    
     sendComment()

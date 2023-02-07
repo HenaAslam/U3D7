@@ -86,7 +86,9 @@ const CommentAreaRight=({id})=>{
 
              ) }
 {isLoading &&   ( <div className="d-flex justify-content-center"><Spinner animation="border" variant="secondary"  /></div>)}
-{comments.length=== 0 ? (<div>Be the first one to comment!</div>) : (<ListGroup>
+{comments.length=== 0 ? (<div style={{color:"green"}}><em>Be the first one to comment!</em></div>) : (
+
+<ListGroup>
 
 
    
@@ -94,26 +96,32 @@ const CommentAreaRight=({id})=>{
    
          {comments.map((c)=>{
             
-             return     <ListGroup.Item className=" mt-3 list d-flex flex-column w-100" key={c._id}>
-               
-                <p  className="py-3 com px-3" >  <Badge variant="info" className="truncate">{c.author} </Badge> {c.comment}</p>    
+             return    <ListGroup.Item className=" mt-3 list d-flex flex-column w-100" key={c._id}>
+               {/* <Badge variant="info" className="truncate">{c.author} </Badge>  */}
+                <p  className="py-3 com px-3" ><strong>{c.author}</strong>  : {c.comment}</p>    
                 <div className="d-flex align-items-center justify-content-around mt-1">
-              
+              <div className="d-flex flex-column justify-content-around" style={{height:"70px"}}>
                 <Badge variant="danger" className="p-1 mr-1"> Rating : {c.rate} / 5 </Badge>
               
              <Button variant="danger" size="sm" className="p-n5" onClick={(e) => {
                   e.preventDefault()
                 deleteComment(c._id);
                   
-                }}>x</Button>
+                }}>Delete</Button>
+                </div>
                 </div>
                 
           
              </ListGroup.Item>
           })}
+          </ListGroup>
+          
+          
+          )}
+
      
    
-</ListGroup>)}
+
 
 <AddComment id={id} fetchh={fetchComments}  />   
 </>

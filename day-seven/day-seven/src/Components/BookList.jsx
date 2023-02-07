@@ -28,7 +28,7 @@ const BookList=()=>{
 
         return(
           
-            <Container className=" mb-5 mt-5">
+            <Container fluid className=" mb-5 mt-5">
                 <Row className='justify-content-center'>
                     <Col xs={12} md={6}>
                     <Form>
@@ -79,10 +79,11 @@ const BookList=()=>{
 
 
 </Container>
+
 <h3>{genre}</h3>
                     <Row className="mt-4 ">
                     
-                     <Col xs={9}>
+                     <Col xs={8} md={9}>
                         <Row>
                      {
        
@@ -98,7 +99,7 @@ const BookList=()=>{
 
                    </Col>
                  
-                     <Col xs={3}  className="comments sticky-top pb-5 ">
+                     <Col xs={4} md={3}  className="comments sticky-top pb-5 ">
                    
                         <h5>{current.title}</h5>
 
